@@ -1,1 +1,10 @@
-<p>stories works!</p>
+<div class="stories">
+    <div class="story" *ngFor="let story of stories">
+        <a routerLink="" [ngClass]="{ 'seen': story.seen, 'my-story': story.myStory }">
+            <div class="img-story">
+                <img [src]="story.account.accountImage" alt="story" />
+            </div>
+            <h6>{{ story.account.accountName }}</h6>
+        </a>
+    </div>
+</div>

@@ -23,3 +23,12 @@ a {
 p, h6, ul, body {
   margin: 0;
 }
+ h6 {
+  font-size: 18px;
+  color: $text-color;
+ }
+ ul {
+  li {
+    list-style: none;
+   }
+ }

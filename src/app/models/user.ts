@@ -1,6 +1,7 @@
 
 export interface UserAccountData {
-    accountName: string;
+    accountName?: string;
+    accountFullName?: string;
     accountImage: string;
     accountUserName?: string;
   }

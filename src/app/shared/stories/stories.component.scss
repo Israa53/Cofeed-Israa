@@ -1,0 +1,66 @@
+@import "./../../../assets/scss/variables";
+
+.stories {
+    display: flex;
+    margin: 40px;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgba($menu-color, .25);
+    .story {
+        margin: 0 10px;
+        h6 {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 45px;
+            object-fit: cover;
+            border: 2px solid $main-color;
+            padding: 5px;
+        }
+    }
+}
+.seen {
+    .img-story {
+      img {
+        border: 2px solid rgba($menu-color, .5) !important;
+    }  
+    }
+    
+}
+.my-story {
+    .img-story {
+        position: relative;
+    }
+
+    .img-story::before {
+        position: absolute;
+        content: "+";
+        z-index: 3;
+        color: #fff;
+        left: 50%;
+        -webkit-transform: translate(-50%, 51%);
+        transform: translate(-50%, 50%);
+        bottom: 50%;
+        font-size: 35px;
+    }
+
+    .img-story::after {
+        position: absolute;
+        z-index: 2;
+        background-color: $main-color;
+        opacity: 0.5;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        content: "";
+        left: 50%;
+        -webkit-transform: translate(-50%, 51%);
+        transform: translate(-50%, 51%);
+        bottom: 52%;
+    }
+}

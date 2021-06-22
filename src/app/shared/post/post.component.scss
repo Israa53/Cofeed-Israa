@@ -1,0 +1,35 @@
+@import "./../../../assets/scss/variables";
+
+.feeds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    width: 100%;
+
+    .posts {
+        width: 50%;
+
+        .img {
+            text-align: center;
+            width: 90%;
+            margin: 15px auto;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+                border: 3px solid $white;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+        .post-data {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+    }
+}

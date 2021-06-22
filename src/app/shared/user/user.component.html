@@ -1,7 +1,7 @@
-<div class="user">
-    <img src="./../../../assets/images/user.jpg" alt="user">
+<div class="user" [ngClass]="{'post': post}">
+    <img [src]="user.accountImage" alt="user">
     <div>
-        <p>Israa Abdellatef</p>
-        <span>@Israa5353</span>
+        <p>{{user.accountFullName}}</p>
+        <span *ngIf="!post">{{user?.accountUserName}}</span>
     </div>
 </div>

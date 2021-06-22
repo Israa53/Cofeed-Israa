@@ -9,8 +9,8 @@ import { environment } from '../environments/environment';
 import { UserComponent } from './shared/user/user.component';
 import { PostComponent } from './shared/post/post.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MainNavComponent } from './dashboard/main-nav/main-nav.component';
-import { NavExtraComponent } from './dashboard/nav-extra/nav-extra.component';
+import { MainNavComponent } from './shared/main-nav/main-nav.component';
+import { NavExtraComponent } from './shared/nav-extra/nav-extra.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({

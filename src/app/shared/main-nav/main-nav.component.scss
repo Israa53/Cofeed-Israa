@@ -12,27 +12,31 @@
   }
 
   h6 {
-    font-size: 18px;
     padding: 0px 40px;
     font-weight: bold;
-    color: $text-color;
   }
 
   nav {
     ul {
         padding: 18px 0;
       li {
-        list-style: none;
         font-size: 16px;
         font-weight: bold;
         a {
             padding: 18px 40px;
             color: $menu-color;
             display: block;
+            i {
+              margin-right: 10px;
+              font-size: 1.2em;
+            }
         }
         a.active {
             box-shadow: 0px 20px 15px rgba(#f7f8fd, 0.7);  
             margin-bottom: 10px;
+            i {
+              color: $main-color;
+            }
         }
         a.active, a:hover, a:visited, a:focus {
             color: $text-color;
@@ -49,5 +53,11 @@
         border-radius: 15px;
         box-shadow: -12px 10px 40px #d2d2d2;
       }
+  }
+  .account {
+    i {
+      float: right;
+      font-size: 14px;
+    }
   }
 }

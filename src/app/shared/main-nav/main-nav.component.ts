@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
-
+  account = {};
   constructor() { }
-
   ngOnInit(): void {
+    this.account = {
+    accountFullName: 'Hassan Ahmed',
+    accountImage: './../../../assets/images/user5.png',
+    accountUserName: '@hassan58'};
   }
-
 }
