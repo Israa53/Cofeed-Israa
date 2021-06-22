@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables";
+
+body {
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+}
+
+.dark-scroll::-webkit-scrollbar-thumb {
+  background: $gray;
+}
+a {
+  text-decoration: none;
+}
+p, h6, ul, body {
+  margin: 0;
+}
