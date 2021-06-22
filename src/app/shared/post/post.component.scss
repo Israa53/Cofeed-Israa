@@ -1,35 +1,53 @@
 @import "./../../../assets/scss/variables";
 
-.feeds {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px 0;
-    width: 100%;
 
     .posts {
-        width: 50%;
-
         .img {
             text-align: center;
             width: 90%;
             margin: 15px auto;
+            height: 260px;
+            box-shadow: 0px 3px 35px rgba($menu-color, .5);
+            border-radius: 20px;
 
             img {
                 width: 100%;
                 border-radius: 20px;
                 border: 3px solid $white;
-                height: 250px;
+                height: 260px;
                 object-fit: cover;
             }
         }
+
         .post-data {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            margin: 30px 30px 30px 0;
+
+            .comment-likes {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: $menu-color;
+                    font-weight: bold;
+
+                    i {
+                        font-size: 1.35em;
+                        cursor: pointer;
+                        margin: 0 10px;
+                    }
+                }
+
+                .red-color {
+                    color: $heart-color;
+
+                    i {
+                        color: $heart-color;
+                    }
+                }
+            }
         }
 
     }
-}

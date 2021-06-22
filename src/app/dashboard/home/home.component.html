@@ -1,13 +1,17 @@
 <app-stories></app-stories>
-<div class="posts">  
+<div class="posts">
     <div class="filter">
         <h6>Feeds</h6>
         <ul>
             <li class="list-item" [ngClass]="{ 'active': filterBy === 'all' }" (click)="filter('all')">All</li>
-            <li class="list-item" [ngClass]="{ 'active': filterBy === 'following' }"(click)="filter('following')">Following</li>
-            <li class="list-item" [ngClass]="{ 'active': filterBy === 'newest' }"(click)="filter('newest')">Newest</li>
-            <li class="list-item" [ngClass]="{ 'active': filterBy === 'popular' }" (click)="filter('popular')">Popular</li>
+            <li class="list-item" [ngClass]="{ 'active': filterBy === 'following' }" (click)="filter('following')">
+                Following</li>
+            <li class="list-item" [ngClass]="{ 'active': filterBy === 'newest' }" (click)="filter('newest')">Newest</li>
+            <li class="list-item" [ngClass]="{ 'active': filterBy === 'popular' }" (click)="filter('popular')">Popular
+            </li>
         </ul>
     </div>
-    <app-post></app-post>
+    <div class="feeds">
+        <app-post *ngFor="let post of posts" [posts]="post" (postLoved)="lovedPost($event)"></app-post>
+    </div>
 </div>

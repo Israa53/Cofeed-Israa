@@ -1,14 +1,14 @@
-<div class="feeds">
-    <div class="posts" *ngFor="let postData of posts">
+<!-- <div class="feeds"> -->
+    <div class="posts">
         <div class="img">
-            <img [src]="postData.imageUrl" alt="post img">
+            <img [src]="posts.imageUrl" alt="post img">
         </div>
         <div class="post-data">
-            <app-user [post]="true" [user]="postData.account"></app-user>
+            <app-user [post]="true" [user]="posts.account"></app-user>
             <div class="comment-likes">
-                <span><i class="fa fa-heart"></i>{{postData.likes}}</span>
-                <span><i class="fa fa-commenting"></i></span>
+                <span [ngClass]="{'red-color': posts.liked === true}" (click)="loved(posts.id)"><i class="fa fa-heart"></i>{{posts.likes}}</span>
+                <span><i class="fa fa-commenting"></i>{{posts.comments}}</span>
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->
