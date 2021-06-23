@@ -9,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HomeComponent implements OnInit {
   filterBy  = 'all';
   posts = [] ;
-  filterArr = posts;
+  filterArr = [];
   constructor() { }
   ngOnInit(): void {
     if (JSON.parse(localStorage.getItem('posts'))) {
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
       this.filterArr = JSON.parse(localStorage.getItem('posts'));
     } else {
       this.posts = posts;
+      this.filterArr = posts
       localStorage.setItem('posts', JSON.stringify(this.posts));
     }
   }
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
       // console.log('not all')
      this.filterArr = [...this.posts].filter(post => post.type === data);
     } else {
-      this.filterArr = posts;
+      this.filterArr = [...this.posts];
     }
 
   }
@@ -36,10 +37,10 @@ export class HomeComponent implements OnInit {
       if (post.id === id) {
         post.likes += 1;
         post.liked = true;
-        localStorage.setItem('posts', JSON.stringify(this.posts));
-        this.filter(this.filterBy);
       }
     });
-
+    // this.filterArr = this.posts
+    localStorage.setItem('posts', JSON.stringify(this.posts));
+    this.filter(this.filterBy);
   }
 }
