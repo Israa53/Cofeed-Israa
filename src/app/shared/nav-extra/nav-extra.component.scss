@@ -1,0 +1,189 @@
+@import "./../../../assets/scss/variables";
+
+.extra-nav {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 345px;
+    i,
+    span {
+        cursor: pointer;
+    }
+
+    .cloud,
+    .notification,
+    .search {
+        border: 2px solid $menu-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    i {
+        color: $menu-color;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+        justify-content: space-between;
+        .search {
+            height: 60px;
+            border-radius: 31px;
+            width: 100px;
+            padding: 0px 25px;
+            margin-right: 15px;
+
+            input {
+                width: 70%;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                height: 100%;
+                padding: 10px;
+                color: $text-color;
+            }
+
+            ::placeholder {
+                color: $menu-color;
+                font-weight: bold;
+                font-size: 15px;
+            }
+        }
+
+        .notification {
+            border-radius: 50%;
+            color: $menu-color;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        i {
+            font-size: 1.5em;
+        }
+
+        .red {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background-color: #ff5775;
+            border-radius: 50%;
+            top: 21px;
+            left: 32px;
+        }
+
+        .cloud {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: relative;
+            background-color: #58b9ff;
+            box-shadow: 0px 3px 35px rgba($menu-color, .5);
+            border: 2px solid #58b9ff;
+
+            i {
+                color: $white;
+            }
+        }
+
+    }
+.latest-posts , .suggested {
+    h6 {
+        color: $text-color;
+    }
+}
+    .suggested {
+        border-bottom: 1px solid rgba($menu-color, .25);
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+
+         
+
+            span {
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+
+        .list {
+            padding: 40px 0;
+
+            .follower {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                button {
+                    border-radius: 10px;
+                    width: 100px;
+                    height: 40px;
+                    cursor: pointer;
+                    background-color: $board-color;
+                    border: 1px solid $menu-color;
+                    color: $text-color;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .follow {
+                    border: none;
+                    background-color: $main-color;
+                    color: white;
+                }
+            }
+        }
+    }
+.latest-posts  {
+padding: 30px 0;
+.latest {
+    margin: 30px 0;
+    padding: 15;
+    background-color: #f6faff;
+    border: 3px solid $white;
+    border-radius: 15px;
+    span {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        color: $main-color;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+}
+}
+.extra-links {
+    margin-bottom: 40px;
+    ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        font-weight: bold;
+        li+li::before{
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background: $menu-color;
+        display: inline-block;
+        margin: 0 10px;
+        }
+        a {
+            color: $menu-color;
+        }
+    }
+}
+    app-user {
+        padding: 0;
+    }
+
+}

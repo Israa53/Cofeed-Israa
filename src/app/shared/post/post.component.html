@@ -1,13 +1,17 @@
 <!-- <div class="feeds"> -->
-    <div class="posts">
+    <div class="posts" [ngClass]="{'latestPost': latestPost}">
         <div class="img">
             <img [src]="posts.imageUrl" alt="post img">
         </div>
         <div class="post-data">
-            <app-user [post]="true" [user]="posts.account"></app-user>
+            <p *ngIf="posts.title">{{posts.title}}</p>
+            <div class="normal-post">
+                <app-user [post]="true" [user]="posts.account" *ngIf="!latestPost" ></app-user>
             <div class="comment-likes">
-                <span [ngClass]="{'red-color': posts.liked === true}" (click)="loved(posts.id)"><i class="fa fa-heart"></i>{{posts.likes}}</span>
+                <span [ngClass]="{'red-color': posts.liked === true || latestPost}" (click)="loved(posts.id)"><i class="fa fa-heart"></i>{{posts.likes}}</span>
                 <span><i class="fa fa-commenting"></i>{{posts.comments}}</span>
+                <span *ngIf="posts.saved"><i class="fa fa-bookmark"></i>{{posts.saved}}</span>
+            </div>
             </div>
         </div>
     </div>

@@ -18,13 +18,20 @@
                 object-fit: cover;
             }
         }
-
+   
         .post-data {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin: 30px 30px 30px 0;
-
+            .normal-post {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            p {
+                margin-bottom: 50px;
+                width: 50%;
+                color: $text-color;
+                font-weight: bold;
+            }
             .comment-likes {
                 display: flex;
                 align-items: center;
@@ -50,4 +57,26 @@
             }
         }
 
+    }
+
+    .latestPost {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .post-data {
+            margin: 20px;
+        }
+        .img, img{
+            height: 110px !important;
+            width: 130px !important; 
+        }
+     .comment-likes span {
+         display: flex;
+        i {
+            font-size: 16px !important;
+            margin: 0 7px !important;       
+         }
+     }
+        
     }

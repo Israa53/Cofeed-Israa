@@ -1,3 +1,52 @@
-<p>Extra nav</p>
-<!-- <app-user></app-user>
-<app-post></app-post> -->
+<div class="extra-nav">
+    <div>
+    <div class="top">
+        <div class="search">
+            <i class="fa fa-search icon"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="notification">
+            <i class="fa fa-bell"></i>
+            <span class="red"></span>
+        </div>
+        <div class="cloud">
+            <i class="fa fa-cloud-upload"></i>
+        </div>
+    </div>
+
+    <div class="suggested">
+        <div class="title">
+            <h6>Suggested For You</h6>
+            <span>See All</span>
+        </div>
+        <div class="list">
+            <div class="follower" *ngFor="let follower of followers">
+              <app-user [post]="false" [follow]="true" [user]="follower.account"></app-user>
+                <button [ngClass]="{'follow': follower.follow}">{{ follower.follow? 'Followed' :  'Follow'}}</button>
+            </div>
+        </div>
+        </div>
+
+        
+            <div class="latest-posts">
+                <div class="title">
+                    <h6>Latest Post Activity </h6>
+                <div class="latest">
+                    <app-post [posts]="post" [latestPost]="true"></app-post>
+                    <span>See All Posts</span>
+                </div>
+                </div>
+                </div>
+            </div>
+                <div class="extra-links">
+                    <ul>
+                        <li><a routerLink="">About</a></li>
+                        <li><a routerLink="">Help</a></li>
+                        <li><a routerLink="">Terms</a></li>
+                        <li><a routerLink="">Popular</a></li>
+                        <li><a routerLink="">Language</a></li>
+                    </ul>
+                </div>
+       
+</div>
+

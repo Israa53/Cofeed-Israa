@@ -12,6 +12,6 @@
         </ul>
     </div>
     <div class="feeds">
-        <app-post *ngFor="let post of posts" [posts]="post" (postLoved)="lovedPost($event)"></app-post>
+        <app-post *ngFor="let post of filterArr" [posts]="post" (postLoved)="lovedPost($event)"></app-post>
     </div>
 </div>

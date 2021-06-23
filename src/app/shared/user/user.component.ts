@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 @Input() post: boolean;
+@Input() follow?: boolean;
 @Input() user?: any;
 
   constructor() { }

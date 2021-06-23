@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { currentUser } from 'src/app/models/user';
 
 @Component({
   selector: 'app-main-nav',
@@ -6,12 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.scss']
 })
 export class MainNavComponent implements OnInit {
-  account = {};
+  account = currentUser;
   constructor() { }
   ngOnInit(): void {
-    this.account = {
-    accountFullName: 'Hassan Ahmed',
-    accountImage: './../../../assets/images/user5.png',
-    accountUserName: '@hassan58'};
   }
 }

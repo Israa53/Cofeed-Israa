@@ -1,4 +1,4 @@
-import { PostData, posts } from './../../models/post';
+import { PostData } from './../../models/post';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Input } from '@angular/core';
 
@@ -9,11 +9,12 @@ import { Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
   @Input() posts: PostData;
+  @Input() latestPost?: boolean;
   @Output() postLoved = new EventEmitter();
   constructor() { }
   ngOnInit(): void {
   }
-  loved(id) {
+  loved(id: number) {
     this.postLoved.emit(id);
   }
 }

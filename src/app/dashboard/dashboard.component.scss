@@ -2,5 +2,8 @@
 
 .dashboard {
     display: flex;
-    background-color: $board-color;
+    .main-component {
+        border-right: 1px solid rgba($menu-color, .25);
+        margin: 40px 0;
+    }
 }
